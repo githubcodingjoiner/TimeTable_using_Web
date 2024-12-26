@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Customizable Weekly Timetable with AI</title>
+</head>
+<body>
+  <h1>Create Your Weekly Timetable</h1>
+  
+  <label>
+    <input type="checkbox" id="toggleSunday"> Include Sunday
+  </label>
+  
+  <table class="timetable" id="timetable">
+    <thead>
+      <tr>
+        <th>Timings/Days</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Timetable rows will be dynamically generated -->
+    </tbody>
+  </table>
+  
+  <button id="addRow">Add Time Slot</button>
+  <button id="openChatbot">Ask AI to Create Timetable</button>
+  
+  <div id="chatbot" class="chatbot">
+    <div class="chatbot-header">
+      <span>AI Chatbot</span>
+      <button id="closeChatbot">&times;</button>
+    </div>
+    <div id="chatContent" class="chat-content"></div>
+    <input type="text" id="userInput" placeholder="Ask the AI to create your timetable...">
+    <button id="sendMessage">Send</button>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

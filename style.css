@@ -1,0 +1,227 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ffe259, #ffa751);
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  /* Page Title Styling */
+  h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 20px 0;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Label Styling */
+  label {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #fff;
+  }
+  
+  /* Table Styling */
+  .timetable {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .timetable thead {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    font-size: 1.1em;
+  }
+  
+  .timetable th,
+  .timetable td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .timetable tbody tr:nth-child(odd) {
+    background-color: #f7f7f7;
+  }
+  
+  .timetable tbody tr:nth-child(even) {
+    background-color: #e3f2fd;
+  }
+  
+  .timetable tbody tr:hover {
+    background-color: #d1c4e9;
+    color: #333;
+  }
+  
+  /* Editable Cell Styling */
+  .editable {
+    cursor: pointer;
+  }
+  
+  .editable:hover {
+    background-color: #fff9c4;
+    color: #333;
+  }
+  
+  /* Button Styling */
+  button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #ff512f, #dd2476);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background: linear-gradient(to right, #dd2476, #ff512f);
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Chatbot Styling */
+  .chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .chatbot-header {
+    background: linear-gradient(to right, #ff512f, #dd2476);
+    color: white;
+    padding: 15px;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .chatbot-header button {
+    background: transparent;
+    color: white;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .chat-content {
+    padding: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    color: #333;
+    flex-grow: 1;
+    font-size: 0.9em;
+  }
+  
+  .chat-content p {
+    margin: 5px 0;
+  }
+  
+  .chat-content .user {
+    text-align: right;
+    color: #6a11cb;
+    font-weight: bold;
+  }
+  
+  .chat-content .ai {
+    text-align: left;
+    color: #2575fc;
+    font-weight: bold;
+  }
+  
+  /* Input and Button in Chatbot */
+  input#userInput {
+    width: calc(100% - 30px);
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    outline: none;
+  }
+  
+  button#sendMessage {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 10px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  button#sendMessage:hover {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    transform: scale(1.05);
+  }
+  
+  /* Tooltip Styling */
+  .tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2em;
+    }
+    
+    .timetable th, .timetable td {
+      font-size: 0.9em;
+      padding: 10px;
+    }
+  
+    .chatbot {
+      width: 90%;
+      right: 5%;
+      bottom: 5%;
+    }
+  }
+  
